@@ -6,16 +6,16 @@ const stage1Enemies = [{
   maxAttackPower: 2
 }, {
   type: 'Golem',
-  health: 1,
-  maxAttackPower: 1,
-  gold: 1,
+  health: 5,
+  maxAttackPower: 4,
+  gold: 8,
 }]
 
 const stage2Enemies = [{
   type: 'Ice-Golem',
-  health: 12,
-  maxAttackPower: 6,
-  gold: 6,
+  health: 18,
+  maxAttackPower: 8,
+  gold: 10,
 }, {
   type: 'Wolf',
   health: 80,
@@ -25,7 +25,7 @@ const stage2Enemies = [{
 
 const stage3Enemies = [{
   type: 'Dragon',
-  health: 300,
+  health: 350,
   gold: 10000,
   maxAttackPower: 120
 }]
