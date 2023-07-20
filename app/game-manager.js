@@ -12,13 +12,14 @@ function healPlayer() {
 function attackEnemy() {
   // enemyTurn()
   (currentEnemy.health -= player.attackPower)
-  if(currentEnemy.health <= 0
-  )  {rewardPlayer()
+  if (currentEnemy.health <= 0
+  ) {
+    rewardPlayer()
     pickRandomEnemyFromCurrentStage()
   }
   drawPlayer()
   drawCurrentEnemy()
-   
+
 }
 
 function drawPlayer() {
@@ -30,22 +31,23 @@ function drawPlayer() {
 }
 
 function drawCurrentEnemy() {
-  
+
   document.getElementById('enemy-type').innerText = currentEnemy.type
-  document.getElementById('enemy-health').innerText = '💖 ' + currentEnemy.health 
+  document.getElementById('enemy-health').innerText = '💖 ' + currentEnemy.health
 }
 
 function enemyTurn() {
-  
-  let enemyDamage=Math.floor(Math.random() *currentEnemy.maxAttackPower)
-(player.curentHealth -=enemyDamage)
-messageUser("you took" + enemyDamage + '💖 ' )
-if (player)
+
+  let enemyDamage = Math.floor(Math.random() * currentEnemy.maxAttackPower)
+    (player.curentHealth -= enemyDamage)
+  messageUser("you took" + enemyDamage + '💖 ')
+  if (player) { }
 }
+
 
 function rewardPlayer() {
   //
-pickRandomEnemyFromCurrentStage()
+  pickRandomEnemyFromCurrentStage()
 }
 
 function buyPotion() {
