@@ -32,16 +32,20 @@ const stage3Enemies = [{
   type: 'Dragon',
   health: 350,
   gold: 1000,
-  maxAttackPower: 120
+  maxAttackPower: 350
 }, {
   type: 'Skeleton',
   health: 550,
-  maxAttackPower: 400,
+  maxAttackPower: 250,
   gold: 750,
-}]
+},
 
-
-
+ {
+  type: 'Lion',
+  health: 410,
+  maxAttackPower: 400,
+  gold: 950,
+ }]
 
 
 

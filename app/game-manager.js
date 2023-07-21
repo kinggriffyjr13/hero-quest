@@ -6,7 +6,17 @@ const player = {
 }
 
 function healPlayer() {
-  // STUB
+ if (player.potions > 0)
+ {
+  player.potions -= 1
+  player.currentHealth += 10
+  enemyTurn()
+  drawPlayer()
+  drawCurrentEnemy()
+ }else{
+  messageUser("you ran out of spicy juice")
+ } 
+
 }
 
 function attackEnemy() {
@@ -54,7 +64,7 @@ function rewardPlayer() {
 }
 
 function buyPotion() {
-  if (player.gold > 5 ){
+  if (player.gold >= 5 ){
     player.gold -= 5
     player.potions += 1
     messageUser('I will take your gold... 🪙 and give you a magic spicy juice')
@@ -66,7 +76,7 @@ function buyPotion() {
 }
 
 function increaseAttack() {
- if (player.gold >10){
+ if (player.gold >=10){
   player.gold -= 10
   player.attackPower += 5
   messageUser('hey kid give me more money and i will give you sterio- magic power boosters')
