@@ -7,7 +7,7 @@ const stage1Enemies = [{
 }, {
   type: 'Golem',
   health: 5,
-  maxAttackPower: 4,
+  maxAttackPower: 3,
   gold: 8,
 }]
 

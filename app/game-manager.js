@@ -66,9 +66,15 @@ function buyPotion() {
 }
 
 function increaseAttack() {
-  // STUB
-}
-
+ if (player.gold >10){
+  player.gold -= 10
+  player.attackPower += 5
+  messageUser('hey kid give me more money and i will give you sterio- magic power boosters')
+ }else{
+  messageUser('what do you think we are running a charity GET OUT NOW!!')
+   }
+drawPlayer()
+  }
 function changeHero(){
   // [✅] get the hero container from the document
   // add the class hero-alt
