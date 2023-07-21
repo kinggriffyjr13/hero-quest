@@ -10,8 +10,10 @@ function healPlayer() {
 }
 
 function attackEnemy() {
-  // enemyTurn()
-  (currentEnemy.health -= player.attackPower)
+  enemyTurn()
+
+  currentEnemy.health -= player.attackPower
+
   if (currentEnemy.health <= 0
   ) {
     rewardPlayer()
@@ -19,7 +21,6 @@ function attackEnemy() {
   }
   drawPlayer()
   drawCurrentEnemy()
-
 }
 
 function drawPlayer() {
@@ -31,7 +32,6 @@ function drawPlayer() {
 }
 
 function drawCurrentEnemy() {
-
   document.getElementById('enemy-type').innerText = currentEnemy.type
   document.getElementById('enemy-health').innerText = '💖 ' + currentEnemy.health
 }
@@ -39,15 +39,18 @@ function drawCurrentEnemy() {
 function enemyTurn() {
 
   let enemyDamage = Math.floor(Math.random() * currentEnemy.maxAttackPower)
-    (player.curentHealth -= enemyDamage)
+  player.currentHealth -= enemyDamage
   messageUser("you took" + enemyDamage + '💖 ')
-  if (player) { }
+  if (player.currentHealth <= 0) {
+    showGameOver()
+  }
 }
 
-
 function rewardPlayer() {
-  //
-  pickRandomEnemyFromCurrentStage()
+  player.gold += currentEnemy.gold
+  if (player.gold >= 10000) {
+    showVictory()
+  }
 }
 
 function buyPotion() {
@@ -57,5 +60,14 @@ function buyPotion() {
 function increaseAttack() {
   // STUB
 }
+
+function changeHero(){
+  // [✅] get the hero container from the document
+  // add the class hero-alt
+  let heroContainer = document.getElementById("hero-container")
+  heroContainer.classList.toggle("hero-alt")
+}
+
+
 
 drawPlayer()

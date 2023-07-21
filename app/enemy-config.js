@@ -21,11 +21,28 @@ const stage2Enemies = [{
   health: 80,
   maxAttackPower: 25,
   gold: 100,
+}, {
+  type: 'Gargoyle',
+  health: 120,
+  maxAttackPower: 150,
+  gold: 250,
 }]
 
 const stage3Enemies = [{
   type: 'Dragon',
   health: 350,
-  gold: 10000,
+  gold: 1000,
   maxAttackPower: 120
+}, {
+  type: 'Skeleton',
+  health: 550,
+  maxAttackPower: 400,
+  gold: 750,
 }]
+
+
+
+
+
+
+
