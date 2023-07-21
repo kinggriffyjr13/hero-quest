@@ -54,7 +54,15 @@ function rewardPlayer() {
 }
 
 function buyPotion() {
-  // STUB
+  if (player.gold > 5 ){
+    player.gold -= 5
+    player.potions += 1
+    messageUser('I will take your gold... 🪙 and give you a magic spicy juice')
+  }else{
+    messageUser('you dont have enough gold')
+  }
+  drawPlayer()
+ 
 }
 
 function increaseAttack() {
